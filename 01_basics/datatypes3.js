@@ -17,5 +17,8 @@ let isLoggedIn=true  // boolean
 
 // object
 
-console.log(typeof "5");
-console.log(typeof 10);
+console.log(typeof "5"); //o/p:string
+console.log(typeof 10);  //o/p:number
+console.log(typeof undefined) //o/p:undefined
+console.log(typeof null)  //o/p:object
+console.log(typeof symbol)  //o/p:undefined
