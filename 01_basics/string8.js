@@ -13,7 +13,8 @@ const newName = new String('RishuRaj');
 // different methods of objects (strings)
 console.log(newName[0]);  // R
 console.log(newName.charAt(2));  // s
-console.log(newName.indexOf('t'));  // 2
+console.log(newName.indexOf('t'));  // -1
+console.log(newName.indexOf('s'));  // 2
 console.log(newName.__proto__) // {}
 console.log(newName.toUpperCase())  // RISHURAJ
 console.log(newName.length);  // 8
@@ -32,7 +33,7 @@ console.log(newStr.trimStart());  // Removes extra spaces from start
 console.log(newStr.trimEnd())     // trim spaces from end
 
 
-// replace method replaces some string with new string
+// "replace" method replaces some string with new string
 const url = "https://rishu%20sharma.com";
 console.log(url.replace('%20' , '-'))    // o/p: https://rishu-sharma.com
 
