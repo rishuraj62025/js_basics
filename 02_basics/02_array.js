@@ -10,8 +10,10 @@ const Female = ["Moni", "Shreya", "Neha"]
 // console.log(people)   // [ 'Rishu', 'Mohit', 'Prayas', 'Moni', 'Shreya', 'Neha' ]
 
 // spread operator
-const people =[...Male, ...Female]
-console.log(people);  // [ 'Rishu', 'Mohit', 'Prayas', 'Moni', 'Shreya', 'Neha' ]
+const people =[Male, Female]  
+const people1=[...Male, ...Female]
+console.log(people);   // [ [ 'Rishu', 'Mohit', 'Prayas' ], [ 'Moni', 'Shreya', 'Neha' ] ]
+console.log(people1)  // // [ 'Rishu', 'Mohit', 'Prayas', 'Moni', 'Shreya', 'Neha' ]
 
 /// FLAT METHOD
 const arr1 = [1,2,3,[4,5],6,7,[8,[9,10,[11,12,13]]]];

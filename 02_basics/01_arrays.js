@@ -49,7 +49,7 @@ console.log("A", myarr)   // A [0, 1, 2, 3, 4, 5, 6]
 const new1 = myarr.slice(1,4)  // 4th index is not included in slice
 console.log(new1)   // [ 1, 2, 3 ]
 // In slice, original array is not changed
-
+    
 console.log("B", myarr)  // B [0, 1, 2, 3, 4, 5, 6]
 const new2 = myarr.splice(1,4)  // 4th index is also included
 console.log(new2)  // [ 1, 2, 3, 4 ]
