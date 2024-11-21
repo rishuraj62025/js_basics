@@ -27,7 +27,7 @@ user.welcomeMessage()     // {
 console.log(this);  // {}
 
 
-// js file pehle browser ke saath js engine mein run hota tha ,engine mein global object jo hai wo window object hai
+// js file pehle browser ke saath js engine mein run hota tha ,browser mein global object jo hai wo window object hai
 
 
 function chai()
@@ -66,7 +66,7 @@ console.log(addtwo(3, 5))    // 8
 // implicit return  , isme return lagana nhi prta 
 //const addthree = (num1, num2, num3) => num1 + num2 + num3
 const addthree = (num1, num2, num3) => (num1 + num2 + num3)    // line 67 & 68 both are same
-console.log(addthree( 3,4,3))   // 10
+console.log(addthree( 3, 4, 3))   // 10
 
 // agar curli braces use kiye hain to return likhna prega , pr jb parenthesis use krenge to return nhi likhna hai
 // explicit return mein return lagana prta hai
