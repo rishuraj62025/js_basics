@@ -24,7 +24,6 @@
 // Ab jitni baar function execute hoga, utni baar memory phase and execution phase chalega
 
 
-
 // ex:
 // let val1 = 5
 // let val2 = 8
