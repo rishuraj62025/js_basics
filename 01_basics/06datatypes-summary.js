@@ -21,7 +21,7 @@ const id = Symbol("2345")
 const anotherid = Symbol("2345")
 console.log(id === anotherid)   // o/p: false
 
-const bigNumber = 8357230932689234n
+const bigNumber = 8357230932689234n  // n represent declare as bigInt
 console.log(bigNumber)
 
 
@@ -58,3 +58,12 @@ console.log(alpha)    // undefined
 // imp****
 console.log(typeof outsidetemp)  // o/p: object
 
+
+typeof result
+undefined = undefined
+null = object
+boolean = boolean
+number =number
+string = string
+function = function
+    symbol = symbol
