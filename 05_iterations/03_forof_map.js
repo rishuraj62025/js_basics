@@ -31,7 +31,7 @@ for (const greet of greetings) {
 
 // Maps
 // It stores unique values 
-const map = new Map
+const map = new Map()
 map.set("IN", "India")
 map.set("fr", "france")
 map.set("jp", "japan")
