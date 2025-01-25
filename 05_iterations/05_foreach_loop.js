@@ -64,7 +64,10 @@ myCoding.forEach( (item) => {
 // ruby
 // python
 
+
+// for each loop value return nhi krta
 const values = myCoding.forEach( (item) => {
-  console.log(item.languagename)
+  //console.log(item.languagename)
+   return item
 })
 console.log(values)   // undefined
