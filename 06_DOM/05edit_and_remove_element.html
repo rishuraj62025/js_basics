@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: aquamarine;">
+     <ul class="language">
+     <li>Javascript</li>
+     
+      </ul>
+</body>
+<script>
+  // there are two ways to add text 
+    function addLanguage(langName) {
+      const li = document.createElement('li')
+      li.innerHTML = `${langName}`
+      document.querySelector('.language').appendChild(li)
+
+    }
+    addLanguage('python')
+    addLanguage('cpp')
+ 
+    // this one is optimized approach to add text
+    function addOptimLang (langName) {
+     const li = document.createElement('li')
+     const addText = document.createTextNode(langName)
+     li.appendChild(addText);
+     document.querySelector('.language').appendChild(li)
+    }
+    addOptimLang("ruby")
+    addOptimLang("golang")
+
+
+    // Edit the content  (python to Mojo)
+    const secondLang = document.querySelector("li:nth-child(2)")   // it directly selects second language of li element
+    //secondLang.innerHTML = "Mojo"
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli)
+
+    // Edit (javascript to Typescript) ,other Method
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>Typescript</li>'
+
+
+    //Remove - golang language 
+    const lastLang = document.querySelector('li:last-Child')
+    lastLang.remove()
+</script>
+</html>

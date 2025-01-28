@@ -125,7 +125,7 @@ console.log(li)           // it gives error
 If we want to apply forEach, map on these, we have to convert nodeList or HTMLCollection to array
 To convert:
 const tempLiList = document.querySelectorAll('li')
-Array.from(tempLiList)   , no w it is converted into array
+Array.from(tempLiList)   , now it is converted into array
 
 const myArray = Array.from(tempLiList)
 myArray.forEach((it)=>{

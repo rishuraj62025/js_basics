@@ -35,5 +35,16 @@
  
     console.log(parent.lastElementChild);
     // o/p: <div class="days">Friday</div>
+
+    const dayOne = document.querySelector('.days');  // select day class first
+    console.log(dayOne);
+
+    console.log(dayOne.parentElement)   // it selects parent element from child element
+    console.log(dayOne.nextElementSibling)
+
+    console.log("NODES :",parent.childNodes) 
+    // o/p: NodeList(11) [text, div.days, text, div.days, text, div.days, text, div.days, text, div.days, text]
+    // here we press enter in writing next line , considered as text
+
  </script>
 </html>
