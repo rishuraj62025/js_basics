@@ -1,0 +1,135 @@
+
+//  query selector
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="main">
+    <div>
+        <h1 id="title" class="heading">DOM Learning on chai aur code <span style="display: none;">test text</span> </h1>
+        <p id="para">Lorem ipsum dolor sit amet.</p>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <input type="password" name="" id="">
+    </div>
+    <ul>
+    <li class="list-item">one</li>
+    <li class="list-item">two</li>
+    <li class="list-item">three</li>
+</ul>
+</body>
+</html>
+
+
+<!-- some methods of dom manipulation
+
+document.getElementById('id-name')  // return the element which contains this id
+document.getElementById('id-name').className ,return the class if there is any class present within that element
+document.getElementById('id-name').getAttribute('id') // returns the id id-name
+document.getElementById('id-name').getAttribute('class') // return the class name present in element 
+document.getElementById('id-name').setAttribute('class','test heading') // set the class attribute to test and heading  
+
+
+const title = document.getElementById('id-name')
+title.style.backgroundColor = 'red' 
+title.style.padding ="15px"
+title.style.borderRadius = '10px';
+
+we can view the content of element by three ways
+ 1.  ans.innerHTML
+'DOM Learning on chai aur code  '
+ 2.  ans.innerText
+'DOM Learning on chai aur code'
+ 3.  ans.textContent
+'DOM Learning on chai aur code  '
+
+
+what is the difference between all of these
+The basic difference between innertest and text content is 
+
+In above code we add some text in h1 element and also style to display:none
+now if we print h1 at console
+
+const title = document.getElementById('id-name')
+title.innerText  , this prints  (DOM Learning on chai aur code)
+title.textContent , this prints (DOM Learning on chai aur code test text)
+
+textC ontent prints all the content ,if any content is not visible also
+
+title.innerHTML , this prints DOM Learning on chai aur code <span style="display: none;">test text</span>
+It prints all the content with html tags also
+
+some query selector ----------------------------
+
+document.getElementByClassName('class-name')  // this query selector for class name
+
+document.querySelector('h2') // it returns first h2 element , if more than 1 h2 element are there
+
+document.querySelector('#id-name')  // it returns element which contain this id name
+
+document.querySelector('.class-name') // it returns element which contain tis class name
+
+document.querySelector('input[type="password"]')  // we can select input field also and pass the attribute
+
+document.querySelector('p:first-child')  // if we want to select the p element
+if there are multiple <p> element and we have to select first p element , we use :first-child
+
+document.querySelector('li:first-child')  // if there are multiple list items and we have to select first item
+
+we can do  styling on these elements also
+const myul = document.querySelector('ul')
+myul.querySelector('li')  
+it returns all li items
+
+const turngreen = myul.querySelector('li')   // it also selects default first  child only,
+turngreen.style.backGroundColor = 'green'
+turngreen.style.padding = '15px'
+
+we can also manipulate the content of selected li items
+turngreen.innerText = 'Ones'   // it change the content of first li items from one to Ones
+
+we can select all elements at once also
+document.querySelectorAll('li')  // it returns all li items 
+const tempLiList = document.querySelectorAll('li') 
+
+
+NodeList is different from array ,but some similarities are there
+const tempLiList = document.querySelectorAll('li') 
+tempLiList.style.color = 'blue'  // it gives error  because it is nodelist not array
+tempLiList[0].style.color = 'blue'  // it changes the first list item color blue
+
+if there is only one h1 in html then also we do the same thing
+const myH1 = document.querySelectorAll('h1')
+myH1.style.color = 'red'  // it gives error becoz it is node list
+myH1[0].style.color = 'red'
+
+we can apply forEach loop on node list and then also manipulate 
+const tempLiList = document.querySelectorAll('li') 
+tempLiList.forEach(function (l) {
+    l.style.backgroundColor = 'yellow'
+})
+
+
+const tempClass = document.getElementByClassName('list-item')  // it returns HTMLCollection
+so, we can't apply forEach, map function on HTML Collection
+tempClass.forEach(function (li) {
+console.log(li)           // it gives error 
+})
+
+
+If we want to apply forEach, map on these, we have to convert nodeList or HTMLCollection to array
+To convert:
+const tempLiList = document.querySelectorAll('li')
+Array.from(tempLiList)   , no w it is converted into array
+
+const myArray = Array.from(tempLiList)
+myArray.forEach((it)=>{
+     it.style.backgroundColor = "white";
+     it.style.Color = "orange"
+})
+--> 

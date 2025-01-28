@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+    .bg-black
+    {
+        color:rgb(24, 2, 2);
+        background-color: aliceblue;
+        
+    }
+     </style>   
+</head>
+<body  class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM Learning on chai aur code 
+            <span style = "display : none">test text</span>
+        </h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</body>
+</html>
+
+// document object model ka matlab hai document jo bana hua hai, kis model se bana hua hai
+// kya uska structure hai, page kaisa dikhta hai
+// ye sb agar pata hai to hm manipulation bhi kr skte hain js se.
+
+// kisi bhi web page pe inspect krke console open krenge ,
+// aur console.log(document) krenge to uss web page ka information mil jaega,
+// pr km information milega
+// agar hmko uss page ka sara information chaiye to
+// to hum console.dir(document) krenge
+
+
+DOM
+-----
+             Window
+                |
+             Document
+                |
+               HTML
+             /    \
+            /      \
+        HEAD        BODY - attribute
+       /   \         |
+      /     \        div - attribute 
+    title   meta     /  \
+     |       |      h1   p   
+ text node  attr   text   text        
+
+
+
+ /// for ex 
+ if we have a id in any page 
+ let <h1 id="heading">rishu</h1>
+
+ // we can manipulate this heading like this
+ document.getElementById('heading').innerHTML = "<h1>rishu raj</h1>" 
+
+ now, heading is changed from 'rishu' to 'rishu raj'.
+ This is called dom manipulation
+ we can manipulate the web page 
