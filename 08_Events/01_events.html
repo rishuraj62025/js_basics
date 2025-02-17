@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #414141; color: rgb(32, 232, 18); ">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <ul>
+            <li><img width="200px" id="photoshop" src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Nature-Wallpaper.jpg" alt="photoshop" ></li>  
+            <!-- onclick="alert('photo')" this is not feasible code ,we should not directly add this attribute to img -->
+            <li><img width="200px" id="japan" src=" https://th.bing.com/th/id/OIP.z9DgCgl3z9jhbiJDMuwsOAHaEK?rs=1&pid=ImgDetMain" alt="" ></li>
+            <li><img width="200px" id="river" src=" https://static.vecteezy.com/system/resources/previews/032/242/170/large_2x/beautiful-waterfall-flowers-water-nature-waterfall-hd-wallpaper-ai-generated-free-photo.jpg" alt="" ></li>    
+            <li ><a style="color: rgb(176, 127, 255);" target="_blank" href="https://google.com" id="google">Google</a></li>
+        </ul>    
+    </div>
+
+</body>
+<script>
+    //   document.getElementById('river').onclick = function(){
+    //     alert("river")
+    // ye bhi onclick method mein jyada information nhi milti hai, 
+    // to iske jagah hme event listeners use krna chaiye
+    //   woh propagation ki ability bhi deta hai
+
+    document.getElementById('river').addEventListener('click',function(e){
+         alert("river") 
+    },false)
+    // ye third parameter, default false hi hota hai
+</script>
+</html>
+
+<!-- javascript mein events sequentially hi run hote hain,
+kuch exceptions hain -->
+
+<!-- type, timestamp, preventDefault
+target, toElement, srcElement, currentTarget
+clientX, clientY, screenX, screenY
+altKey, ctrlKey, shiftKey, keyCode -->
+
+
+<!-- ye third paramter ,event propagation keliye hain
+isme 2 hai ,1. event bubbling , 2. event capturing -->
