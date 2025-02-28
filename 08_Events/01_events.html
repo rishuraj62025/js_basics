@@ -9,7 +9,6 @@
     <h2>Amazing Images</h2>
     <div>
         <ul id="images">
-            <ul>
             <li><img width="200px" id="photoshop" src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Nature-Wallpaper.jpg" alt="photoshop" ></li>  
             <!-- onclick="alert('photo')" this is not feasible code ,we should not directly add this attribute to img -->
             <li><img width="200px" id="japan" src=" https://th.bing.com/th/id/OIP.z9DgCgl3z9jhbiJDMuwsOAHaEK?rs=1&pid=ImgDetMain" alt="" ></li>
@@ -26,9 +25,40 @@
     // to iske jagah hme event listeners use krna chaiye
     //   woh propagation ki ability bhi deta hai
 
-    document.getElementById('river').addEventListener('click',function(e){
-         alert("river") 
+    // document.getElementById('river').addEventListener('click',function(e){
+    //      alert("river") 
+    // },false)
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //      console.log("clicked inside the ul");
+    // },false)
+
+    // document.getElementById('river').addEventListener('click',function(e){
+    //      console.log("river clicked");
+    //      e.stopPropagation();   // it stops the bubbling from inside to outside
+    // },false)
+
+    // // use of preventDefault
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     console.log("google clicked")
+    //     e.stopPropagation()
+    // },false)
+
+
+    // apply addEventListener , click and remove image 
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.parentNode)
+        
+        if(e.target.tagName ==='IMG')
+    {
+        let removeIt = e.target.parentNode;
+        // removeIt.remove();
+        removeIt.parentNode.removeChild(removeIt);  
+    }
+        
     },false)
+
     // ye third parameter, default false hi hota hai
 </script>
 </html>
@@ -42,5 +72,11 @@ clientX, clientY, screenX, screenY
 altKey, ctrlKey, shiftKey, keyCode -->
 
 
-<!-- ye third paramter ,event propagation keliye hain
-isme 2 hai ,1. event bubbling , 2. event capturing -->
+<!-- ye third paramter ,event propagation ka 2 context hota hai
+ 1. event bubbling , 2. event capturing 
+   false means event bubbling
+   true means event capturing
+   
+   in event bubbling ,event propagate krta hai inside to outside 
+   in event capturing ,event propagate krta hai outside to inside
+ -->
