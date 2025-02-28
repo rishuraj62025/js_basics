@@ -1,0 +1,32 @@
+javascript is synchronous and single threaded  , it is default behaviour of js
+
+js single threaded hai pr wo slow nhi hai , kyonki js engine single nhi milta hai wo runtime environment mein hi milta hai
+jaise nodejs, dino etc
+
+Execution Context :
+            execute one line of code at a time
+            (each operation waits for the last one to complete before executing)
+
+
+Blocking code        vs        Non Blocking code
+     |                               |
+block the flow of program      Does not block execution
+     |                               |
+Read file sync                  Read file Async
+
+blocking and Non blocking code , both are good, depends on use cases.
+
+
+
+
+EVENT LOOP Diagram
+
+js engine, web API, task Queue, 
+
+some new APIs add to js 
+fetch() api , isme task queue ko expand kiya gya
+isme ek promise concept aata hai, jo bolta hai ye kaam kr dena, success ho to bata dena , naa ho to bhi bata dena
+
+jisko high priority queue bola jata hai
+fetch() high priority queue se jata hai
+
