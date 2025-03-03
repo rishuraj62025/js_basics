@@ -135,4 +135,11 @@ getAllUseres()
 
 //----------------------------------------------------
 
-// jst above code of fetch can be wru
+// just above code of fetch can be written in then,catch also
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response)=>{
+    return  response.json()
+}).then((data)=>{
+    console.log(data)
+ }).catch((error)=> console.log(error))
