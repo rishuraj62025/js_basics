@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: aliceblue;"> 
+<pre>
+    // XML ke andar ready state hoti hai , inme 5 state hai
+value      state                       Description
+0	     UNSENT	             Client has been created. open() not called yet. 
+1	     OPENED	             open() has been called. 
+2	     HEADERS_RECEIVED	 send() has been called, and headers and status are available. 
+3	     LOADING	             Downloading; responseText holds partial data. 
+4	     DONE	             The operation is complete. 
+
+</pre>
+</body>
+<script>
+ // xml ki jo request bhejte hain usko ajax request bolte hain   
+ const requestUrl = 'https://api.github.com/users/rishuraj62025'
+ const xhr = new XMLHttpRequest();  // isse data ko send ya request kr skte hain
+ xhr.open('GET' , requestUrl)
+ xhr.onreadystatechange = function(){
+    console.log(xhr.readyState)
+    if(xhr.readyState === 4)
+ {
+    const data = JSON.parse(this.responseText)  // this.responseText it is a string, we have to convert into object to extract data from it
+    console.log(typeof data) // object
+    console.log(data)
+    console.log(data.followers)
+ }
+ }
+ xhr.send()
+</script>
+</html>
+
+
+// api ek talking language hai(interface) frontend and backend ke beech mein
+// agar ek js mein file likha hai ek java mein likha hai inko bhi apas mein baat krne ke liye api ka use krte hain
+
+// api ko debug krne ke liye ek website hai  (jsonformatter.org)
+
+
+
+// bahut saare engine hai jo js ko run karate hain
+// unme se ek hai v8 engine
+// nodejs v8 engine ka hi ek implementation hai
+// ye v8 engine pura cpp mein likha hua hai  
+// ye v8 engine debugging tools , kuch api access ye sb provide krta hai
+// console.log ye bhi core js ka part nhi hai , isko bhi v8 engine  hi provide krta hai.
+// console.log ka actual implementation yahi pe hai
