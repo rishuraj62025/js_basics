@@ -112,6 +112,7 @@ async function consumepromiseFive(){
     
 }
 
+
 consumepromiseFive()
 
 //--------------------------------------------------------
@@ -143,3 +144,6 @@ fetch('https://jsonplaceholder.typicode.com/users')
 }).then((data)=>{
     console.log(data)
  }).catch((error)=> console.log(error))
+
+
+ // priority of fetch is high
