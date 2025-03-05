@@ -45,7 +45,7 @@ function User(username, loginCount, isLoggedIn)
 
 const userOne =new User("Rishu", 10, true)
 const userTwo =new User("Raj", 11, false)
-console.log(userOne.constructor)  // ye ek function hai jo khud hi ka reference deti hai
+console.log(userOne.constructor)  // ye ek function hai jo khud hi ka reference deta hai
 console.log(userOne)
 console.log(userTwo)
 
