@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+
+<script>
+    class React{
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            // requirement
+            document.querySelector('button')
+            .addEventListener('click', this.handleClick.bind(this))
+            // yaha pe bind ka use hai ki sirf reference nhi bhejna hai , bind bhi krna hai , 
+            // upar jo this.library, this.server  hai uska bhi access le pae,
+            // ye bind apne saath this, constructor aur sbhi function 
+            // ko bind krke bhejta hai
+        }
+
+        handleClick(){
+            console.log('button clicked');
+            console.log(this); 
+            console.log(this.server)  // https://localhost:300 
+
+        }
+    }
+
+    const app = new React();
+</script>
+</html>

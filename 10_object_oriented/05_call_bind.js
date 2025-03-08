@@ -18,4 +18,4 @@ function createUser(username, email, password)
 const chai = new createUser("chai", "abc@gmail.com", "123")
 console.log(chai);
 // o/p:  createUser { username: 'chai', email: 'abc@gmail.com', password: '123'}
-  
+   
