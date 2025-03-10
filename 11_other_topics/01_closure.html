@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+// lexical scoping
+
+// function init() 
+// {
+//     var name = "Mozilla"; // name is a local variable created by init
+//     function displayName() 
+//     {
+//       // displayName() is the inner function, that forms a closure
+//       console.log(name); // use variable declared in the parent function
+//     }
+//     displayName();
+// }
+//   init();    // Mozilla
+
+  //  CLOSURE 
+
+//   function makeFunc() {
+//     const name = "Mozilla";
+//     function displayName() {
+//       console.log(name);
+//     }
+//     return displayName;
+//   }
+  
+// yahan pe jb function ke andar se return displayName
+// kr rhe , to yahan sirf displayName function nhi jayega 
+// yahan makeFunc function ka bhi pura lexical scoping jaega 
+
+//   const myFunc = makeFunc();
+//   myFunc();   // Mozilla
+
+  // closure ka yahan mtlb hai ki jb hm ek function ke andar se
+  // ek function ko hi return kr dete hain to bs function return nhi hota 
+  // pura lexical scope bhi outer function ka jata hai
+</script>
+<script>
+//    document.querySelector("#orange").onclick = function(){
+//     document.body.style.backgroundColor = `orange`
+//    }
+//    document.querySelector("#green").onclick = function(){
+//     document.body.style.backgroundColor = `green`
+//    }
+
+function clickHandler(color)
+{
+    
+   return function(){
+    document.body.style.backgroundColor = `${color}`
+   }
+}
+
+document.getElementById("orange").onclick = clickHandler('orange')
+document.getElementById("green").onclick = clickHandler('green')
+</script> 
+</html> 

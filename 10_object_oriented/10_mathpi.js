@@ -7,7 +7,7 @@ console.log(descriptor)
 //     writable: false,
 //     enumerable: false,
 //     configurable: false
-//   }
+// }
 
 const chai ={
     name:'ginger tea',
